@@ -15,6 +15,8 @@ namespace VehicleMania.src.model
             this.horsePower = horsePower;
         }
 
+        public Auto(string model, string plate) : this(model, plate, GenerateHorsePower()) { }
+
         public Auto(string model, int horsePower) : this(model, GeneratePlate().ToString(), horsePower) { }
 
         public Auto(int horsePower) : this("Unknown", GeneratePlate().ToString(), horsePower) { }

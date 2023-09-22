@@ -15,6 +15,8 @@ namespace VehicleMania.src.model
             this.cynlinder = cynlinder;
         }
 
+        public Moto(string model, string plate) : this(model, plate, GenerateCynlinder()) { }
+
         public Moto(string model, int cynlinder) : this(model, GeneratePlate().ToString(), cynlinder) { }
 
         public Moto(int cynlinder) : this("Unknown", GeneratePlate().ToString(), cynlinder) { }
